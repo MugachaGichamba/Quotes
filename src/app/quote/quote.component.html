@@ -8,7 +8,9 @@
 
 
 <ul>
-
-    <li *ngFor='let quote of quotes'>{{quote.name}}</li>
+    <div *ngFor='let quote of quotes'>
+        <li>{{quote.name}}</li>
+        <app-quote-details [quote]='quote'></app-quote-details>
+    </div>
 </ul>
 <!--  <p *ngIf='quote.length > 5'>You have the most quotes</p> -->
