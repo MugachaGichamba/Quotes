@@ -13,6 +13,11 @@ export class QuoteComponent implements OnInit {
     new Quote('is good' , "nyee mtee", 50),
 
   ]
+
+  toogleDetails(index){
+    console.log("fikad")
+    this.quotes[index].details = !this.quotes[index].details;
+  }
   constructor() { }
 
   ngOnInit() {
