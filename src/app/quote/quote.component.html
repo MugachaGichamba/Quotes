@@ -10,7 +10,7 @@
 <ul>
     <div *ngFor='let quote of quotes; let i = index'>
         <li>{{quote.name}}</li>
-        <button (click)='toogleDetails(i)'>Show Author and Votes</button>
+        <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Author and Votes</button>
         <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
     </div>
 </ul>
