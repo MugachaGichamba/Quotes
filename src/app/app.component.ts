@@ -9,10 +9,5 @@ import {Quote} from './quote'
 export class AppComponent {
   title = 'Quotes';
   
-  quotes = [
-    new Quote('In my view fortune is a woman'),
-    new Quote('the person who thinks'),
-    new Quote('is good'),
-    
-  ]
+  
 }
