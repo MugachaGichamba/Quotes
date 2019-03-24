@@ -14,6 +14,12 @@ export class QuoteComponent implements OnInit {
 
   ]
 
+  removeGoal(toDelete, index){
+if(toDelete){
+  this.quotes.splice(index, 1);
+}
+  }
+
   toogleDetails(index){
     console.log("fikad")
     this.quotes[index].details = !this.quotes[index].details;

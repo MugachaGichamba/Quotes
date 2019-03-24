@@ -11,7 +11,7 @@
     <div *ngFor='let quote of quotes; let i = index'>
         <li>{{quote.name}}</li>
         <button (click)='toogleDetails(i)'>Show Author and Votes</button>
-        <app-quote-details *ngIf="quote.details" [quote]='quote'></app-quote-details>
+        <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
     </div>
 </ul>
 <!--  <p *ngIf='quote.length > 5'>You have the most quotes</p> -->
