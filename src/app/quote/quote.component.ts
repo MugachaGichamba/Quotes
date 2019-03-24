@@ -8,9 +8,9 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote('In my view fortune is a woman', "nicollo machiaveli", 100),
-    new Quote('the person who thinks', "mugacha gichamba", 200),
-    new Quote('is good' , "nyee mtee", 50),
+    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
+    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
+    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
 
   ]
 
