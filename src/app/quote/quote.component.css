@@ -6,4 +6,9 @@
     border-radius: 2%;
     width: auto;
     background-color: aliceblue;
+    text-align: center;
+}
+
+#quote_list {
+    margin-top: 20px;
 }
