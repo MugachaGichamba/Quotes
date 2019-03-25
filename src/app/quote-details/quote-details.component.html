@@ -1,7 +1,14 @@
 <h3>Author: {{quote.author}}</h3>
 <h4>Submitted by: {{quote.submitter}}</h4>
-<h4>Likes: {{quote.upVotes}}</h4>
-<h4>Dislikes: {{quote.upVotes}}</h4>
+<div id=:likes>
+    <h4>Likes: {{quote.upVotes}}</h4>
+    <button (click)='likeQuote()'>Like</button>
+</div>
+<div id="dislikes">
+    <h4>Dislikes: {{quote.upVotes}}</h4>
+    <button (click)='dislikeQuote()'>Dislike</button>
+</div>
+
 <h4>submitted On: {{quote.date}}</h4>
 
 <button (click)='deleteQuote(true)'>Delete</button>
