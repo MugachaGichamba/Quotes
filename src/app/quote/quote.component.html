@@ -6,12 +6,21 @@
     <hr>
 </div>
 
-
-<ul>
-    <div *ngFor='let quote of quotes; let i = index'>
-        <li>{{quote.quote}}</li>
-        <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Author and Votes</button>
-        <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-quotes-form></app-quotes-form>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <div *ngFor='let quote of quotes; let i = index'>
+                    <li>{{quote.quote}}</li>
+                    <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Author and Votes</button>
+                    <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
+                </div>
+            </ul>
+        </div>
     </div>
-</ul>
+</div>
+
 <!--  <p *ngIf='quote.length > 5'>You have the most quotes</p> -->
