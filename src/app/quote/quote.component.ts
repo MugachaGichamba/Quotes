@@ -14,6 +14,13 @@ export class QuoteComponent implements OnInit {
 
   ]
 
+  addNewQuote(quote){
+    quote.upVotes=0;
+    quote.downVotes=0;
+    quote.date = new Date();
+    this.quotes.push(quote);
+  }
+
   removeGoal(toDelete, index){
 if(toDelete){
   this.quotes.splice(index, 1);
