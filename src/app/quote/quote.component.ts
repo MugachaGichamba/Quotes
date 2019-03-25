@@ -8,13 +8,14 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
-    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
-    new Quote('In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
+    new Quote(1, 'In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
+    new Quote(2, 'In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
+    new Quote(3, 'In my view fortune is a woman', "nicollo machiaveli", "mugacha g", 0, 0, new Date),
 
   ]
 
   addNewQuote(quote){
+    quote.id = this.quotes.length + 1;
     quote.upVotes=0;
     quote.downVotes=0;
     quote.date = new Date();

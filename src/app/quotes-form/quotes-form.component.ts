@@ -8,7 +8,7 @@ import {Quote} from '../quote';
 })
 export class QuotesFormComponent implements OnInit {
   //newQuote property: default object to be changed by form inputs
-  newQuote = new Quote("","","",0,0,new Date());
+  newQuote = new Quote(0,"","","",0,0,new Date());
   @Output() addQuote= new EventEmitter<Quote>();
 
   submitQuote(){

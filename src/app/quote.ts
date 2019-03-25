@@ -1,6 +1,9 @@
 export class Quote {
+    
     public details: boolean;
-    constructor(public quote: string,
+    constructor(
+        public id: number,
+        public quote: string,
     public author: string,
     public submitter: string,
     public upVotes:number,
