@@ -1,12 +1,24 @@
 <h3>Author: {{quote.author}}</h3>
 <h4>Submitted by: {{quote.submitter}}</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <button (click)='likeQuote()' class="btn btn-success">Like</button>
+            <h4>Likes: {{quote.upVotes}}</h4>
+
+        </div>
+        <div class="col-md-6">
+            <button (click)='dislikeQuote()' class="btn btn-danger">Dislike</button>
+            <h4>Dislikes: {{quote.downVotes}}</h4>
+
+        </div>
+    </div>
+</div>
 <div id=:likes>
-    <h4>Likes: {{quote.upVotes}}</h4>
-    <button (click)='likeQuote()'>Like</button>
+
 </div>
 <div id="dislikes">
-    <h4>Dislikes: {{quote.downVotes}}</h4>
-    <button (click)='dislikeQuote()'>Dislike</button>
+
 </div>
 
 <h4>submitted On: {{quote.date}}</h4>
