@@ -8,11 +8,15 @@
 
 
 <div class="container">
+
     <div class="row">
+
         <div class="col-md-4" id="quote_form">
+            <h2>Register Quote Here!</h2>
             <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
         </div>
         <div class="col-md-6" id="quote_list">
+            <h2>Quotes</h2>
             <ul>
                 <div *ngFor='let quote of quotes; let i = index' id="quote_div">
                     <li id="each_quote">{{quote.quote}}</li>
