@@ -19,7 +19,10 @@
             <h2>Quotes</h2>
             <ul>
                 <div *ngFor='let quote of quotes; let i = index' id="quote_div">
+
                     <li id="each_quote">{{quote.quote}}</li>
+
+
                     <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Author and Votes</button>
                     <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
                 </div>
