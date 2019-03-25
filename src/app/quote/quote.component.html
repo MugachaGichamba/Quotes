@@ -1,20 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-        Welcome to Quotes!
-    </h1>
-    <hr>
-</div>
+
+
+<h1>
+    Welcome to Quotes!
+</h1>
+<hr>
+
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" id="quote_form">
             <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="quote_list">
             <ul>
-                <div *ngFor='let quote of quotes; let i = index'>
-                    <li>{{quote.quote}}</li>
+                <div *ngFor='let quote of quotes; let i = index' id="quote_div">
+                    <li id="each_quote">{{quote.quote}}</li>
                     <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Author and Votes</button>
                     <app-quote-details *ngIf="quote.details" [quote]='quote' (toDelete)='removeGoal($event, i)'></app-quote-details>
                 </div>
